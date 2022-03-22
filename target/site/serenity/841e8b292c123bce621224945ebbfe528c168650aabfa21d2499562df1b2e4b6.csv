@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"User","GET - As an admin I have to be able to get detail user","SUCCESS","2022-03-22T21:13:04.078+07:00[Asia/Bangkok]","0.0","12.9"
+"User","POST - As an admin I have to be able to create new user","SUCCESS","2022-03-22T21:13:16.998+07:00[Asia/Bangkok]","0.0","1.17"
