@@ -143,7 +143,7 @@
             <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 22-03-2022 21:13</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 24-03-2022 21:06</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -172,9 +172,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-ban ignored-icon fa-2x' title='IGNORED'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">
+                                <span class="ignore-color">
                                     POST - As an admin I have to be able to create new user
                                         <span class="related-issue-title"></span>
                                 </span>
@@ -238,7 +238,7 @@
                         </td>
 
                         <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                        <td width="100"><span class="top-level-step">020ms</span></td>
+                        <td width="100"><span class="top-level-step">1s 587ms</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -263,7 +263,7 @@
                         </td>
 
                         <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-group-step">001ms</span></td>
+                        <td width="100"><span class="nested-group-step">004ms</span></td>
                     </tr>
 
                                 </table>
@@ -294,7 +294,7 @@
                         </td>
 
                         <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                        <td width="100"><span class="top-level-step">1s 085ms</span></td>
+                        <td width="100"><span class="top-level-step">8s 178ms</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -324,7 +324,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">1s 081ms</span></td>
+                        <td width="100"><span class="nested-step">8s 171ms</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -349,7 +349,7 @@
                         </td>
 
                         <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-group-step">001ms</span></td>
+                        <td width="100"><span class="nested-group-step"></span></td>
                     </tr>
                     <tr class="test-SUCCESS">
 
@@ -363,7 +363,7 @@
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="nested-group-step">
-                                                POST https://reqres.in/api/users
+                                                POST https://demoqa.com/Account/v1/User
                                         </span>
                                 <span class="evidence">
                                         <span class="piece-of-evidence">
@@ -379,19 +379,19 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4>Response</h4>
-                                        <p>URL: https://reqres.in/api/users</p>
-                                        <p>Status code: 201</p>
+                                        <p>URL: https://demoqa.com/Account/v1/User</p>
+                                        <p>Status code: 406</p>
                                         <p>Content Type: application/json</p>
                                         <h4>Request Headers</h4>
                                         <pre>Accept=*/*<br>Content-Type=application/json</pre>
                                         <h4>Content Body</h4>
-                                        <pre>{<br>    &quot;name&quot;: &quot;morpheus&quot;,<br>    &quot;job&quot;: &quot;leader&quot;<br>}</pre>
+                                        <pre>{<br>    &quot;password&quot;: &quot;Password1234!&quot;,<br>    &quot;userName&quot;: &quot;aisyahns195&quot;<br>}</pre>
                                         <h4>Request Cookies</h4>
                                         <pre></pre>
                                         <h4>Response Headers</h4>
-                                        <pre>Date: Tue, 22 Mar 2022 14:13:17 GMT<br>Content-Type: application/json; charset=utf-8<br>Content-Length: 84<br>Connection: keep-alive<br>X-Powered-By: Express<br>Access-Control-Allow-Origin: *<br>Etag: W/&quot;54-te5yA1pqrzaRAlSkb/GcRyhCGY8&quot;<br>Via: 1.1 vegur<br>CF-Cache-Status: DYNAMIC<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=RBx3n%2BjtO%2F8zFCNyCxNN8PbabvjnFW%2FbH1U768oxFxOVvLR9bzd474bb%2BRcbIwFltjhjzk%2Bqo4aF%2FQn3OOv6xHbInqprIQLgAuHilzUPP37yv1TOqnE37iSFosQ%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Server: cloudflare<br>CF-RAY: 6eff86f0ccc89e20-SIN<br>alt-svc: h3=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400</pre>
+                                        <pre>Server: nginx/1.17.10 (Ubuntu)<br>Date: Thu, 24 Mar 2022 14:06:19 GMT<br>Content-Type: application/json; charset=utf-8<br>Content-Length: 40<br>Connection: keep-alive<br>X-Powered-By: Express<br>ETag: W/&quot;28-Ol+1T9TtJMfkxjesktiJwJPAuBU&quot;</pre>
                                     <h4>Response Body</h4>
-                                        <pre>{<br>    &quot;name&quot;: &quot;morpheus&quot;,<br>    &quot;job&quot;: &quot;leader&quot;,<br>    &quot;id&quot;: &quot;771&quot;,<br>    &quot;createdAt&quot;: &quot;2022-03-22T14:13:17.845Z&quot;<br>}</pre>
+                                        <pre>{<br>    &quot;code&quot;: &quot;1204&quot;,<br>    &quot;message&quot;: &quot;User exists!&quot;<br>}</pre>
                                 </div>
                             </div>
                         </div>
@@ -412,13 +412,13 @@
                                 </table>
                             </td>
                         </tr>
-                    <tr class="test-SUCCESS">
+                    <tr class="test-IGNORED">
 
                         <td width="50" class="step-icon">
                             <a name="2"></a>
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2')"
                                    style="display:block">
-                                    <i class="fa fa-plus-square-o imgstepSection2 success-icon"
+                                    <i class="fa fa-plus-square-o imgstepSection2 ignored-icon"
                                        style="margin-left: 20px; float:left; padding-right:5px"></i>
                                 </a>
                         </td>
@@ -436,98 +436,64 @@
                             </div>
                         </td>
 
-                        <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                        <td width="100"><span class="top-level-step">004ms</span></td>
+                        <td width="130"><span class="top-level-step">IGNORED</span></td>
+                        <td width="100"><span class="top-level-step"></span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
                                 <table id="stepSection2" class="step-table-nested" style="display:none;">
-                    <tr class="test-SUCCESS">
+                    <tr class="test-IGNORED">
 
                         <td width="70" class="step-icon">
                             <a name="2-0"></a>
                                 <span style="margin-left: 40px;"
-                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-ban ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                         </td>
 
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="nested-group-step">
-                                                I validate the status code is {int}
-                                        </span>
-                                <span class="evidence">
-                                </span>
-                            </div>
-                        </td>
-
-                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-group-step">001ms</span></td>
-                    </tr>
-
-                                </table>
-                            </td>
-                        </tr>
-                    <tr class="test-SUCCESS">
-
-                        <td width="50" class="step-icon">
-                            <a name="3"></a>
-                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection3')"
-                                   style="display:block">
-                                    <i class="fa fa-plus-square-o imgstepSection3 success-icon"
-                                       style="margin-left: 20px; float:left; padding-right:5px"></i>
-                                </a>
-                        </td>
-
-                        <td class="step-description-column">
-                            <div class="step-description">
-                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection3')"
-                                   style="display:block;">
-                                    <span class="top-level-step">
                                                 And validate the data detail after create user
                                         </span>
-                                </a>
                                 <span class="evidence">
                                 </span>
                             </div>
                         </td>
 
-                        <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                        <td width="100"><span class="top-level-step">046ms</span></td>
+                        <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                        <td width="100"><span class="nested-group-step">004ms</span></td>
                     </tr>
-                        <tr>
-                            <td colspan="5">
-                                <table id="stepSection3" class="step-table-nested" style="display:none;">
-                    <tr class="test-SUCCESS">
+                    <tr class="test-IGNORED">
 
                         <td width="70" class="step-icon">
-                            <a name="3-0"></a>
+                            <a name="2-1"></a>
                                 <span style="margin-left: 40px;"
-                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-ban ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                         </td>
 
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="nested-group-step">
-                                                validate the data detail after create user
+                                                And get userId for other request
                                         </span>
                                 <span class="evidence">
                                 </span>
                             </div>
                         </td>
 
-                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-group-step">044ms</span></td>
+                        <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                        <td width="100"><span class="nested-group-step">003ms</span></td>
                     </tr>
 
                                 </table>
                             </td>
                         </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-IGNORED">
                         <td colspan="2"></td>
-                    <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>1.17s</em></span></td>
+                    <td width="130"><span class="top-level-step"><em>IGNORED</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>9.99s</em></span></td>
                 </tr>
 
             </table>

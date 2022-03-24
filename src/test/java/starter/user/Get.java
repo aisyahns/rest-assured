@@ -7,31 +7,28 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class Get {
 
-    protected static String base_url = "https://reqres.in/api/";
+    protected static String base_url = "https://demoqa.com/Account/v1/";
 
     @Step("I set an endpoint for GET detail user")
-    public String setAnEndpointForGet(){
-        return base_url + "users/2";
+    public String setAnEndpointForGet(String userId){
+        return base_url + "User/" + userId;
     }
 
     @Step("I request GET detail user")
-    public void requestGetDetailUser(){
+    public void requestGetDetailUser(String userId, String token){
         SerenityRest.given()
+                .header("Authorization", token)
                 .when()
-                .get(setAnEndpointForGet());
+                .get(setAnEndpointForGet(userId));
     }
 
     @Step("I validate the status code is {int}")
     public void validateStatusCode(int statusCode){
-//        restAssuredThat(response -> response.statusCode(statusCode));
         SerenityRest.then().statusCode(statusCode);
     }
 
     @Step("validate the data detail")
-    public void validateDataDetail(){
-//        restAssuredThat(response -> response.body("data.id", equalTo(2)));
-//        restAssuredThat(response -> response.body("data.email", equalTo("janet.weaver@reqres.in")));
-        SerenityRest.then().body("data.id", equalTo(2));
-        SerenityRest.then().body("data.email", equalTo("janet.weaver@reqres.in"));
+    public void validateDataDetail(String userId){
+        SerenityRest.then().body("userId", equalTo(userId));
     }
 }
