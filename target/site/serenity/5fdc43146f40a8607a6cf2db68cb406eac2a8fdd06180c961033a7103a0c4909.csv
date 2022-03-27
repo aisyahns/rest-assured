@@ -1,4 +1,4 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"User","POST - As an admin I have to be able to create new user","SUCCESS","2022-03-24T20:37:57.844+07:00[Asia/Bangkok]","0.0","10.58"
-"User","POST - As a user I have to be able to generate token","SUCCESS","2022-03-24T20:38:08.473+07:00[Asia/Bangkok]","0.0","2.33"
-"User","GET - As a user I have to be able to get detail user","FAILURE","2022-03-24T20:38:10.812+07:00[Asia/Bangkok]","0.0","1.72"
+"User","POST - As an admin I have to be able to create new user","SUCCESS","2022-03-27T08:08:51.96+07:00[Asia/Bangkok]","0.0","14.09"
+"User","POST - As a user I have to be able to generate token","SUCCESS","2022-03-27T08:09:06.077+07:00[Asia/Bangkok]","0.0","1.65"
+"User","GET - As a user I have to be able to get detail user","FAILURE","2022-03-27T08:09:07.74+07:00[Asia/Bangkok]","0.0","1.61"

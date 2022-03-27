@@ -11,16 +11,16 @@ import starter.user.PostGenerateToken;
 
 public class UserStep {
 
-    public String userId, token;
+    public String userId, token, username;
 
     @Steps
-    Get get;
+    Get get = new Get();
 
     @Steps
-    Post post;
+    Post post = new Post();
 
     @Steps
-    PostGenerateToken postGenerateToken;
+    PostGenerateToken postGenerateToken = new PostGenerateToken();
 
     @Given("I set an endpoint for GET detail user")
     public void iSetAnEndpointForGETDetailUser() {
@@ -28,13 +28,8 @@ public class UserStep {
     }
 
     @When("I request GET detail user")
-    public void iRequestGETDetailUser() {
-        get.requestGetDetailUser(this.userId, this.token);
-    }
-
-    @Then("I validate the status code is 200")
-    public void iValidateTheStatusCodeIs200() {
-        get.validateStatusCode(200);
+    public void iRequestGETDetailUser() throws Exception{
+        get.requestGetDetailUser();
     }
 
     @And("validate the data detail")
@@ -50,11 +45,7 @@ public class UserStep {
     @When("I request POST detail user")
     public void iRequestPOSTDetailUser() {
         post.requestPostDetailUser();
-    }
-
-    @Then("I validate the status code is 201")
-    public void iValidateTheStatusCodeIs201() {
-        get.validateStatusCode(201);
+        this.username = post.getUsername();
     }
 
     @And("validate the data detail after create user")
@@ -73,7 +64,7 @@ public class UserStep {
     }
 
     @When("I request POST generate token")
-    public void iRequestPOSTGenerateToken() {
+    public void iRequestPOSTGenerateToken() throws Exception{
         postGenerateToken.requestPostGenerateToken();
     }
 

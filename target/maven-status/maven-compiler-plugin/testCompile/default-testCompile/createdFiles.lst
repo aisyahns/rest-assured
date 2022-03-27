@@ -1,6 +1,7 @@
 starter\user\Post.class
 starter\stepdefinitions\UserStep.class
 CucumberTestSuite.class
+Utils\General.class
 starter\stepdefinitions\BookStep.class
 starter\user\PostGenerateToken.class
 starter\user\Get.class
