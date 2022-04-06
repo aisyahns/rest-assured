@@ -30,11 +30,8 @@ jobs:
         run: mvn --batch-mode --update-snapshots verify
       - name: Run automation customer
         run: mvn clean verify
-      - name: Collect Allure files and generate allure-report folder
-        run: allure generate output/
+      - name: experiment
+        run : |
+          pwd
+          echo {{ env.GITHUB_WORKSPACE }}
 
-      - name: Publish Allure artifact to Github Actions
-        uses: actions/upload-artifact@v3
-        with:
-            name: allure-report
-            path: allure-report
