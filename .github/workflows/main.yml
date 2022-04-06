@@ -33,5 +33,5 @@ jobs:
       - name: experiment
         run : |
           pwd
-          echo {{ env.GITHUB_WORKSPACE }}
+          echo {{ github.workspace }}
 
