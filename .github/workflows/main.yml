@@ -27,6 +27,7 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - name: experiment
+        working-directory : src
         run : |
           pwd
           echo ${{ github.workspace }}
