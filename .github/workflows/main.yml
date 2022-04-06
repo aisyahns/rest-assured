@@ -27,8 +27,8 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - name: experiment
-        working-directory: rest-assured
         run : |
           pwd
           echo ${{ github.workspace }}
+          ls
 
