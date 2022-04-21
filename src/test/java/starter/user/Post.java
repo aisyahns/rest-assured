@@ -10,8 +10,6 @@ import org.json.simple.JSONObject;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import static net.serenitybdd.rest.SerenityRest.given;
-import static net.serenitybdd.rest.SerenityRest.then;
 import static org.hamcrest.Matchers.equalTo;
 
 public class Post {
@@ -32,27 +30,34 @@ public class Post {
     }
 
     @Step("I request POST detail user")
-    public void requestPostDetailUser(){
+    public void requestPostDetailUser(String username, String password){
         JSONObject requestData = new JSONObject();
-        this.username = general.randomUsername();
+        if (username.equals("new")){
+            this.username = general.randomUsername();
+            try (FileWriter file = new FileWriter("src//test//resources//filejson//username.json")) {
+                file.write(this.username);
+                file.flush();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else if (username.equals("same")){
+            this.username = "aisyahns22";
+        }
+
         requestData.put("userName", this.username);
-        requestData.put("password", "Password1234!");
+        requestData.put("password", password);
 
         SerenityRest.given().header("Content-Type", "application/json").body(requestData.toJSONString());
         SerenityRest.when().post(setPostEndpoint());
-
-        try (FileWriter file = new FileWriter("src//test//resources//filejson//username.json")) {
-            file.write(username);
-            file.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     @Step("validate the data detail after create user")
-    public void validateDataDetail(){
-        SerenityRest.then().body("username", equalTo(this.username));
-//        SerenityRest.then().body(equalTo(true));
+    public void validateDataDetail(String message){
+        if (message.equals("success")){
+            SerenityRest.then().body("username", equalTo(this.username));
+        } else {
+            SerenityRest.then().body("username", equalTo(null));
+        }
     }
 
     @Step("Get userId from the response")
@@ -67,21 +72,5 @@ public class Post {
         }
         System.out.println(userId);
         return userId;
-    }
-
-    @Step("I request POST detail user with invalid password")
-    public void requestPostInvalid(){
-        JSONObject requestData = new JSONObject();
-        requestData.put("userName", "aisyahns980");
-        requestData.put("password", "password");
-
-        given().header("Content-Type", "application/json")
-                .body(requestData.toJSONString())
-                .when().post(setPostEndpoint());
-    }
-
-    @Step("validate the data detail after failed create user")
-    public void validateDataDetailFailed(){
-        then().body("code", equalTo("1300"));
     }
 }

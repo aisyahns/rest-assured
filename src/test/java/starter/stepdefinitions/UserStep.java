@@ -7,6 +7,7 @@ import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
 import starter.user.Get;
 import starter.user.Post;
+import starter.user.PostAuthorized;
 import starter.user.PostGenerateToken;
 
 public class UserStep {
@@ -14,13 +15,16 @@ public class UserStep {
     public String userId, token, username;
 
     @Steps
-    Get get = new Get();
+    Get get;
 
     @Steps
-    Post post = new Post();
+    Post post;
 
     @Steps
-    PostGenerateToken postGenerateToken = new PostGenerateToken();
+    PostAuthorized postAuthorized;
+
+    @Steps
+    PostGenerateToken postGenerateToken;
 
     @Given("I set an endpoint for GET detail user")
     public void iSetAnEndpointForGETDetailUser() {
@@ -44,13 +48,13 @@ public class UserStep {
 
     @When("I request POST detail user")
     public void iRequestPOSTDetailUser() {
-        post.requestPostDetailUser();
+//        post.requestPostDetailUser();
         this.username = post.getUsername();
     }
 
     @And("validate the data detail after create user")
-    public void validateTheDataDetailAfterCreateUser() {
-        post.validateDataDetail();
+    public void validateTheDataDetailAfterCreateUser(String message) {
+        post.validateDataDetail(message);
     }
 
     @And("get userId for other request")
@@ -78,18 +82,40 @@ public class UserStep {
         this.token = postGenerateToken.getToken();
     }
 
-    @When("I request POST detail user with invalid password")
-    public void iRequestPOSTDetailUserWithInvalidPassword() {
-        post.requestPostInvalid();
-    }
-
     @Then("I validate the status code is {int}")
     public void iValidateTheStatusCodeIs(int arg0) {
         get.validateStatusCode(arg0);
     }
 
-    @And("validate the data detail after failed create user")
-    public void validateTheDataDetailAfterFailedCreateUser() {
-        post.validateDataDetailFailed();
+    @Given("I set an endpoint for POST new {string} with {string}")
+    public void iSetAnEndpointForPOSTNewWith(String username, String password) {
+        post.requestPostDetailUser(username, password);
+    }
+
+    @And("validate the {string} after create user")
+    public void validateTheAfterCreateUser(String message) {
+        post.validateDataDetail(message);
+    }
+
+    @And("get userId if {string} for other request")
+    public void getUserIdIfForOtherRequest(String message) {
+        if (message.equals("success")){
+            post.getUserId();
+        }
+    }
+
+    @Given("I set an endpoint for authorized myself")
+    public void iSetAnEndpointForAuthorizedMyself() {
+        postAuthorized.setEndpoint();
+    }
+
+    @When("I request POST authorized myself")
+    public void iRequestPOSTAuthorizedMyself() throws Exception{
+        postAuthorized.requestPostAuthorized();
+    }
+
+    @And("validate the data detail for authorized")
+    public void validateTheDataDetailForAuthorized() {
+        postAuthorized.validateDataDetailAuthorized();
     }
 }

@@ -6,6 +6,6 @@ public class General {
     Random rand = new Random();
 
     public String randomUsername(){
-        return "aisyah" + + rand.nextInt(100);
+        return "aisyah" + + rand.nextInt(1000);
     }
 }
