@@ -28,5 +28,5 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Run automation api
+      - name: Run automation api with maven
         run: mvn clean verify
