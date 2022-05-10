@@ -26,7 +26,7 @@ public class GetBookStep {
     }
 
     @When("I request get list book")
-    public void iRequestGetListBook() {
+    public void iRequestGetListBook() throws Exception{
         getListBook.requestGetListBook();
     }
 
@@ -37,7 +37,8 @@ public class GetBookStep {
 
     @And("get isbn data for other request")
     public void getIsbnDataForOtherRequest() {
-        getListBook.getIsbn();
+        System.out.println("yaya");
+//        getListBook.getIsbn();
     }
 
     @Given("I am doing login")
