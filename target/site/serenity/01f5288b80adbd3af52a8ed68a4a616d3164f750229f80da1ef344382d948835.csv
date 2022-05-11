@@ -1,6 +1,3 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"User","POST - As an admin I have to be able to create new user","SUCCESS","2022-05-09T21:04:44.626+07:00[Asia/Bangkok]","0.0","34.21"
-"User","POST - As a user I have to be able to generate token","SUCCESS","2022-05-09T21:05:19.517+07:00[Asia/Bangkok]","0.0","2.03"
-"User","GET - As a user I have to be able to get detail user","SUCCESS","2022-05-09T21:05:21.567+07:00[Asia/Bangkok]","0.0","4.8"
-"User","GET - As a user I have to authorized myself","SUCCESS","2022-05-09T21:05:26.403+07:00[Asia/Bangkok]","0.0","2.15"
-"Book","Get list book","SUCCESS","2022-05-09T21:04:44.434+07:00[Asia/Bangkok]","0.0","14.36"
+"User","POST - As a user I have to be able to generate token","SUCCESS","2022-05-11T20:14:25.876+07:00[Asia/Bangkok]","0.0","8.39"
+"Book","Get list book","SUCCESS","2022-05-11T20:14:25.775+07:00[Asia/Bangkok]","0.0","8.49"
